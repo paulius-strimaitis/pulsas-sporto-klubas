@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="lt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tvarkaraštis – Pulsas</title>
+    <!-- 1. CSS reset iš CDN (nuoroda – UZDUOTIS.md) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.css"
+    />
+
+    <!-- 2. Google Fonts: Montserrat (700, 800) ir Inter (400, 500, 600) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- 3. Sukompiliuotas css/style.css (ne .scss!) -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- header blokas: logotipas (img/logo.svg + „Pulsas“) ir nav blokas su 3 nuorodomis:
+       Pradžia → index.html, Tvarkaraštis → tvarkarastis.html, Registracija → registracija.html.
+       Aktyvaus puslapio nuoroda gauna modifikatorių --active -->
+    <header class="header">
+      <div class="header__container">
+        <a href="index.html" class="header__logo">
+          <img src="img/logo.svg" alt="Pulsas logotipas" />
+          <span>PULSAS</span>
+        </a>
+
+        <nav class="nav">
+          <a href="index.html" class="nav__link">Pradžia</a>
+          <a href="tvarkarastis.html" class="nav__link nav__link--active"
+            >Tvarkaraštis</a
+          >
+          <a href="registracija.html" class="nav__link">Registracija</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- h1 „Savaitės tvarkaraštis“ ir tekstas -->
+      <section class="section section--schedule">
+        <div class="container">
+          <h1 class="section__title">Savaitės tvarkaraštis</h1>
+          <p class="section__text">
+            Išsirink sau tinkamiausią treniruotės laiką.
+          </p>
+        </div>
+      </section>
+
+      <!-- schedule blokas: <table> su <thead> ir <tbody>, 6 stulpeliai, 7 eilutės.
+         Lygis rodomas tag bloku: tag--easy, tag--medium, tag--hard -->
+      <section class="schedule">
+        <div class="container">
+          <div class="schedule__scroll">
+            <table class="schedule__table">
+              <thead>
+                <tr>
+                  <th>Diena</th>
+                  <th>Laikas</th>
+                  <th>Treniruotė</th>
+                  <th>Treneris</th>
+                  <th>Lygis</th>
+                  <th>Vietos</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>Pirmadienis</td>
+                  <td>06:30</td>
+                  <td>Joga</td>
+                  <td>Ieva Petraitė</td>
+                  <td><span class="tag tag--easy">Lengva</span></td>
+                  <td>8 / 15</td>
+                </tr>
+
+                <tr>
+                  <td>Pirmadienis</td>
+                  <td>18:00</td>
+                  <td>Kardio intervalai</td>
+                  <td>Tomas Kazlauskas</td>
+                  <td><span class="tag tag--hard">Sunki</span></td>
+                  <td>12 / 20</td>
+                </tr>
+
+                <tr>
+                  <td>Antradienis</td>
+                  <td>19:00</td>
+                  <td>Jėgos treniruotė</td>
+                  <td>Marius Jonaitis</td>
+                  <td><span class="tag tag--medium">Vidutinė</span></td>
+                  <td>5 / 12</td>
+                </tr>
+
+                <tr>
+                  <td>Trečiadienis</td>
+                  <td>07:00</td>
+                  <td>Spiningas</td>
+                  <td>Greta Vaitkutė</td>
+                  <td><span class="tag tag--medium">Vidutinė</span></td>
+                  <td>15 / 18</td>
+                </tr>
+
+                <tr>
+                  <td>Ketvirtadienis</td>
+                  <td>18:30</td>
+                  <td>Joga</td>
+                  <td>Ieva Petraitė</td>
+                  <td><span class="tag tag--easy">Lengva</span></td>
+                  <td>10 / 15</td>
+                </tr>
+
+                <tr>
+                  <td>Penktadienis</td>
+                  <td>17:30</td>
+                  <td>Kardio intervalai</td>
+                  <td>Tomas Kazlauskas</td>
+                  <td><span class="tag tag--hard">Sunki</span></td>
+                  <td>20 / 20</td>
+                </tr>
+
+                <tr>
+                  <td>Šeštadienis</td>
+                  <td>10:00</td>
+                  <td>Jėgos treniruotė</td>
+                  <td>Marius Jonaitis</td>
+                  <td><span class="tag tag--medium">Vidutinė</span></td>
+                  <td>3 / 12</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- cta blokas: „Radai tinkamą laiką?“ + mygtukas į registracija.html -->
+      <section class="cta">
+        <div class="container">
+          <div class="cta__content">
+            <h2 class="cta__title">Radai tinkamą laiką?</h2>
+            <p class="cta__text">Registruokis į treniruotę jau šiandien!</p>
+          </div>
+
+          <a href="registracija.html" class="btn btn--primary">
+            Registruotis
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer blokas: tekstas „© 2026 Pulsas sporto klubas · Vilnius, Sporto g. 12“ ir tos pačios 3 nuorodos -->
+    <footer class="footer">
+      <div class="footer__container">
+        <p class="footer__text">
+          © 2026 Pulsas sporto klubas · Vilnius, Sporto g. 12
+        </p>
+
+        <nav class="footer__nav">
+          <a href="index.html" class="footer__link">Pradžia</a>
+          <a href="tvarkarastis.html" class="footer__link">Tvarkaraštis</a>
+          <a href="registracija.html" class="footer__link">Registracija</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

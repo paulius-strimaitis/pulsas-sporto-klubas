@@ -1,0 +1,33 @@
+@use "../abstracts/variables" as v;
+
+.schedule {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 20px 60px;
+
+  &__scroll{
+    overflow: auto;
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 750px;
+
+    th,
+    td {
+      padding: 18px;
+      text-align: left;
+      border-bottom: 1px solid #333;
+    }
+
+    th {
+      color: #ff6b35;
+      font-weight: 700;
+    }
+
+    td {
+      color: #fff;
+    }
+  }
+}

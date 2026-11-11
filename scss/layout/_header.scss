@@ -1,0 +1,53 @@
+@use "../abstracts/variables" as v;
+
+.header {
+  background-color: v.$surface;
+  border-bottom: 1px solid v.$surface-light;
+
+  &__container {
+    max-width: v.$container-width;
+    margin: 0 auto;
+    padding: 20px 24px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-family: v.$font-heading;
+    font-size: 22px;
+    font-weight: 800;
+    color: v.$primary;
+
+    img {
+      width: 36px;
+      height: 36px;
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+
+  &__link {
+    color: v.$text-muted;
+    font-weight: 500;
+    transition: color v.$transition;
+
+    &:hover {
+      color: v.$primary;
+    }
+
+    &--active {
+      color: v.$primary;
+    }
+  }
+}

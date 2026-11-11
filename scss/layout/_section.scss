@@ -1,0 +1,49 @@
+@use "../abstracts/variables" as v;
+
+.section {
+  padding: 80px 24px;
+
+  &--schedule{
+    padding-bottom: 0;
+  }
+
+  &__container {
+    max-width: v.$container-width;
+    margin: 0 auto;
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  &__title {
+    font-family: v.$font-heading;
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    color: v.$text-muted;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 25px;
+  }
+
+  @media (max-width: 900px) {
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@use '../abstracts/variables' as v;
+
+.footer {
+  background-color: v.$surface;
+  border-top: 1px solid v.$surface-light;
+  padding: 32px 24px;
+
+  &__container {
+    max-width: v.$container-width;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__text {
+    color: v.$text-muted;
+    font-size: 14px;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 24px;
+  }
+
+  &__link {
+    color: v.$text-muted;
+    font-size: 14px;
+    transition: color v.$transition;
+
+    &:hover {
+      color: v.$primary;
+    }
+  }
+
+  @media (max-width: 600px) {
+    &__container {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    &__nav {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.card {
+  position: relative;
+  padding: 32px;
+  background-color: v.$surface;
+  border: 1px solid v.$surface-light;
+  border-radius: v.$radius;
+  @include m.hover-lift;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color v.$transition;
+
+  &__icon {
+    display: inline-block;
+    font-size: 40px;
+    margin-bottom: 24px;
+    transition: transform v.$transition;
+  }
+
+  &__title {
+    font-family: v.$font-heading;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  &__text {
+    color: v.$text-muted;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  &--featured {
+    border-color: v.$primary;
+  }
+
+  &:hover {
+    border-color: v.$primary;
+  }
+
+  &:hover &__icon {
+    transform: scale(1.15) rotate(8deg);
+  }
+}

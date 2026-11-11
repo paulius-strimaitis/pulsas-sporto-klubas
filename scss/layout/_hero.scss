@@ -1,0 +1,46 @@
+@use "../abstracts/variables" as v;
+
+.hero {
+  background-image:
+    linear-gradient(90deg, rgba(16, 18, 24, 0.95), rgba(16, 18, 24, 0.35)),
+    url("../img/hero.svg");
+
+  background-size: cover;
+  background-position: center;
+  min-height: 500px;
+
+  display: flex;
+  align-items: center;
+
+  &__container {
+    width: min(100% - 48px, 1200px);
+    margin-inline: auto;
+    padding: 80px 0;
+  }
+
+  &__title {
+    max-width: 650px;
+    margin: 24px 0;
+    font-family: v.$font-heading;
+    font-size: clamp(36px, 5vw, 64px);
+    font-weight: 800;
+    line-height: 1.1;
+    animation: slide-up 0.8s ease-out both;
+  }
+
+  &__text {
+    max-width: 520px;
+    color: v.$text-muted;
+    font-size: 18px;
+    line-height: 1.7;
+    animation: slide-up 0.8s ease-out 0.2s both;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 16px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+    animation: slide-up 0.8s ease-out 0.4s both;
+  }
+}

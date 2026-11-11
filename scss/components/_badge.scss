@@ -1,0 +1,16 @@
+@use '../abstracts/variables' as v;
+
+.badge {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 50px;
+  background-color: v.$primary;
+  color: v.$background;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+
+  &--pulse {
+    animation: badge-pulse 2s ease-in-out infinite;
+  }
+}

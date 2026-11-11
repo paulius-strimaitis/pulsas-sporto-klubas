@@ -1,0 +1,24 @@
+.tag{
+    display:inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+
+    &--easy{
+        background-color:#1f4936;
+        color:#86efac;
+    }
+
+    &--medium{
+        background-color: #493b1f;
+        color:#fcd34d;
+    }
+
+    &--hard{
+        background-color:#4a2424 ;
+        color:#fca5a5;
+    }
+
+
+}
